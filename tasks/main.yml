@@ -1,0 +1,14 @@
+---
+- name: Implantar Tomcat
+  hosts: localhost
+  tasks:
+  - name: Instalar Tomcat
+    package: 
+      name: tomcat9
+      state: present  
+    become: yes
+  - name:
+    package:
+      name: postgres-13
+      state: present
+    become: yes 
